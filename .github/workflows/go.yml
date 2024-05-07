@@ -23,6 +23,7 @@ jobs:
   
       - name: Build
         run: go build -v ./...
+        working-directory: ./examples/helloworld/greeter_server
   
       - name: Test
         run: go test -v ./...
