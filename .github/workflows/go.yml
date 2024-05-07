@@ -24,7 +24,10 @@ jobs:
       - name: Build
         run: |
           cd examples/helloworld/greeter_server
+          pwd
+          ls
           go build -v ./...
+          ls
           
   
       - name: Test
