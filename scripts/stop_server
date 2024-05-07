@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo service greeter_server start 
+sudo service greeter_server stop 
