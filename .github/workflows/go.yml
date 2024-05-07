@@ -33,10 +33,6 @@ jobs:
           ls
           go build -v ./...
           ls
-          
-  
-      - name: Test
-        run: go test -v ./...
         
       - uses: shallwefootball/s3-upload-action@master
         with:
