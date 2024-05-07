@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /examples/helloworld/greeter_server/greeter_server
-    destination: /home/ubuntu/go/bin
+    destination: /home/ubuntu/grpc-go/examples/helloworld/greeter_server
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
