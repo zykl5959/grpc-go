@@ -41,6 +41,10 @@ jobs:
           aws_bucket: yi-zheng-test
           source_dir: '.'
           destination_dir: ''
+          
+      - name: upload
+        run: |
+          aws deploy push --application-name HelloWorld_App --s3-location s3://yi-zheng-test/HelloWorld_App.zip --ignore-hidden-files
 
   continuous-deployment:
     runs-on: ubuntu-latest
