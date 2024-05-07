@@ -38,8 +38,12 @@ jobs:
       - name: Test
         run: go test -v ./...
         
-      - name: Upload to S3
-        run: aws s3 sync ./ s3://${{ env.s3bucket }}/${{ env.codedeployname }}/${{ env.environment }}/ --delete
+      - uses: shallwefootball/s3-upload-action@master
+        with:
+          aws_key_id: ${{ secrets.AWS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
+          aws_bucket: test
+          source_dir: '/examples/helloworld/greeter_server'
 
   continuous-deployment:
     runs-on: ubuntu-latest
