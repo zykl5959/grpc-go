@@ -65,7 +65,7 @@ jobs:
         id: deploy
         run: |
           aws deploy create-deployment \
-            --application-name YI_TEST \
+            --application-name HelloWorld_App2\
             --deployment-group-name Yi \
             --deployment-config-name CodeDeployDefault.OneAtATime \
             --s3-location bucket=yi-zheng-test,bundleType=zip,key=HelloWorld_App2.zip
