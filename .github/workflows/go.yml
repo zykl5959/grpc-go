@@ -43,7 +43,7 @@ jobs:
           aws_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
           aws_bucket: test
-          source_dir: '/examples/helloworld/greeter_server'
+          source_dir: 'examples/helloworld/greeter_server'
 
   continuous-deployment:
     runs-on: ubuntu-latest
