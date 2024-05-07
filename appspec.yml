@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /examples/helloworld/greeter_server/greeter_server
+  - source: /examples/helloworld/greeter_server
     destination: /home/ubuntu/grpc-go/examples/helloworld/greeter_server
 hooks:
   BeforeInstall:
