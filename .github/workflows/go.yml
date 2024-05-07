@@ -44,6 +44,7 @@ jobs:
           
       - name: upload
         run: |
+          aws deploy create-application --application-name HelloWorld_App
           aws deploy push --application-name HelloWorld_App --s3-location s3://yi-zheng-test/HelloWorld_App.zip --ignore-hidden-files
 
   continuous-deployment:
