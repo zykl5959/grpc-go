@@ -44,8 +44,8 @@ jobs:
           
       - name: upload
         run: |
-          aws deploy create-application --application-name HelloWorld_App2
-          aws deploy push --application-name HelloWorld_App2 --s3-location s3://yi-zheng-test/HelloWorld_App.zip --ignore-hidden-files
+          aws deploy create-application --application-name HelloWorld_App3
+          aws deploy push --application-name HelloWorld_App3 --s3-location s3://yi-zheng-test/HelloWorld_App.zip --ignore-hidden-files
 
   continuous-deployment:
     runs-on: ubuntu-latest
@@ -65,7 +65,7 @@ jobs:
         id: deploy
         run: |
           aws deploy create-deployment \
-            --application-name HelloWorld_App2\
+            --application-name HelloWorld_App3 \
             --deployment-group-name Yi \
             --deployment-config-name CodeDeployDefault.OneAtATime \
             --s3-location bucket=yi-zheng-test,bundleType=zip,key=HelloWorld_App2.zip
